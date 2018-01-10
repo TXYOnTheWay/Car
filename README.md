@@ -1,2 +1,2 @@
 # Car
-Some analysis about Car's comment or news.
+Some analysis about Car's comments or news.
