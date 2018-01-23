@@ -44,7 +44,7 @@ def re_regular(relist):
 def seg_sentence(sentence):
     word_list=[]
     sentence_seged = jieba.cut(sentence.strip())  
-    stopwords = filetolist('stopwords.txt')  # 这里加载停用词的路径    
+    stopwords = filetolist(filepath3)  # 这里加载停用词的路径    
     #print(stopwords)    
     for word in sentence_seged:  
         if word not in stopwords:  
