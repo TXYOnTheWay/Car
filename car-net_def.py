@@ -41,7 +41,7 @@ def re_regular(relist):
     return re_list    
 
 #通过jieba进行分词    
-def seg_sentence(sentence):
+def seg_sentence(sentence,filepath3):
     word_list=[]
     sentence_seged = jieba.cut(sentence.strip())  
     stopwords = filetolist(filepath3)  # 这里加载停用词的路径    
