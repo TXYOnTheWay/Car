@@ -12,7 +12,8 @@ import re
 #i=源数据中的开始列数，例如i=1为‘车型’列，i=2为‘标题’列
 #j=源数据中的行数，例如j=1为表头，j=2业务数据
 #m=源数据中的时间列
-def seg_list(filepath2,i,j,m):
+#filepath3是停用词路径
+def seg_list(filepath2,filepath3,i,j,m):
     wlist=[]
     relist=[]
     list1=filetolist(filepath2)
@@ -20,7 +21,7 @@ def seg_list(filepath2,i,j,m):
     while r<len(list1):
         sentence=list1[r].strip().split(',')#生成列表
         sentence1=sentence[i]#结巴分词
-        wordlist=seg_sentence(sentence1)
+        wordlist=seg_sentence(sentence1,filepath3)
         wlist.append(wordlist)
         sentence2=sentence[m]#正则表达式，处理时间列 
         relist.append(sentence2)
