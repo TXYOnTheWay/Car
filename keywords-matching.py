@@ -47,7 +47,7 @@ def dictlist(filepath1,filename1,filename2,filename3,filename4,filename5,filenam
     dict_list.append(dict11)
     return dict_list
 
-labeldictlist=dictlist('E://电信/项目/外部数据挖掘项目/质量协会/指标/','一安全.txt','一变速箱与传动.txt','一车内空间.txt','一车身外观.txt','一电子设备.txt','一发动机.txt','一驾驶操控和视野.txt','一空调.txt','一零部件.txt','一内饰.txt','一座椅.txt',4)   
+labeldictlist=dictlist('E://电信/项目/外部数据挖掘项目/质量协会/指标v2/','一安全.txt','一变速箱与传动.txt','一车内空间.txt','一车身外观.txt','一电子设备.txt','一发动机.txt','一驾驶操控和视野.txt','一空调.txt','一零部件.txt','一内饰.txt','一座椅.txt',4)   
 #print(labeldictlist)
 
 #读取文本文件，并生成列表
@@ -101,8 +101,17 @@ def sentencelabel(labeldictlist,worddict):
     return sentencelabeldict
 
 test=sentencelabel(labeldictlist,worddict)                
-print (test)       
-    
+#print (test)       
 
+#查找字典中value是空的
+def selectnull(test):
+    test1={}
+    for i in test.keys():
+        if test[i]==[]:
+            test1[i]=[]
+    return test1
+
+test1=selectnull(test)
+print (test1)
 
 
